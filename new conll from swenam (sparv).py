@@ -34,7 +34,7 @@
 
 
 
-
+# Shellscript for using the tokenization provided by Språkbankens tool Sparv. Make sure the files to be uploaded are in utf-8 (use iconv for quickly encoding multiple files).
 # for f in ../text_files/utf8/*; do curl -X POST -F files[]=@"/Volumes/320/tjarles/Google Drive/729A97/Projekt/SweNam-100-test-files+answer_file/text_files/utf8/${f##*/}" https://ws.spraakbanken.gu.se/ws/sparv/v1/upload? > data.tmp;  grep -E "link" data.tmp | sed -E "s/.*link='(.*)'.*/\1/g" | xargs curl > tmp.zip; unzip tmp.zip; done
 
 import os, sys
